@@ -73,7 +73,7 @@ jobs:
 
     - name: ⚙️ 设置IP、网关和版本号
       run: |
-        CONFIG_PATH="./files/etc/uci-defaults/99-custom.sh"
+        CONFIG_PATH="./files/uci-defaults/99-custom.sh"
         echo "当前网络配置路径: $CONFIG_PATH"
         
         # 1. 替换版本号占位符
@@ -90,7 +90,7 @@ jobs:
            sed -i "/uci set network.lan.ipaddr/a \        uci set network.lan.gateway='${{ inputs.gateway }}'\n        uci set network.lan.dns='${{ inputs.gateway }}'" "$CONFIG_PATH"
         else
            echo "模式：DHCP / 默认模式 (主路由)"
-           # 保持原脚本逻辑：单网口自动 DHCP，多网口保持 192.168.10.1
+           # 保持原脚本逻辑：单网口自动 DHCP，多网口保持 192.168.5.1
         fi
 
         # 3. 替换脚本末尾的描述信息
