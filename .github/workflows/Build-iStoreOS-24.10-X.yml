@@ -148,5 +148,6 @@ jobs:
         body_path: ${{ github.workspace }}/router-info.md
         files: |
           imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
-          token: ${{ secrets.GITHUB_TOKEN }}
-
+        token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
