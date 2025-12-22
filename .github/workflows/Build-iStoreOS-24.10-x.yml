@@ -151,9 +151,9 @@ jobs:
 
           # 2. 根据判断追加 Docker 状态
           if [ "${{ github.event.inputs.include_docker }}" == "yes" ]; then
-            echo "🧩 **Docker 状态**: 已集成" >> ${{ github.workspace }}/router-info.md
+            echo "📜 **Docker 状态**: 已集成" >> ${{ github.workspace }}/router-info.md
           else
-            echo "🧩 **Docker 状态**: 未集成" >> ${{ github.workspace }}/router-info.md
+            echo "📜 **Docker 状态**: 未集成" >> ${{ github.workspace }}/router-info.md
           fi
 
     - name: 🚀 上传到 Release
