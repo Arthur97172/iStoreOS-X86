@@ -6,9 +6,9 @@ echo "Starting 99-custom.sh at $(date)" >>$LOGFILE
 uci set firewall.@zone[1].input='ACCEPT'
 
 # 设置主机名映射，解决安卓原生 TV 无法联网的问题
-uci add dhcp domain
-uci set "dhcp.@domain[-1].name=time.android.com"
-uci set "dhcp.@domain[-1].ip=203.107.6.88"
+#uci add dhcp domain
+#uci set "dhcp.@domain[-1].name=time.android.com"
+#uci set "dhcp.@domain[-1].ip=203.107.6.88"
 
 # 设置主机名
 uci set system.@system[0].hostname='iStoreOS'
@@ -85,8 +85,6 @@ elif [ "$count" -gt 1 ]; then
     # LAN口设置静态IP
     uci set network.lan.proto='static'
     # 多网口设备 支持修改为别的ip地址,别的地址应该是网关地址，形如192.168.xx.1 项目说明里都强调过。
-    # 旁路的设置分2类情况,情况一是单网口的设备,默认是DHCP模式，ip应该在上一级路由器里查看。之后进入web页在设置旁路。
-    # 情况二旁路由如果是多网口设备，也应当用网关访问网页后，在自行在web网页里设置。总之大家不能直接在代码里修改旁路网关。千万不要徒增bug啦。
     uci set network.lan.ipaddr='192.168.5.1'
     uci set network.lan.netmask='255.255.255.0'
 fi
