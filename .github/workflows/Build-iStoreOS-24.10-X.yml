@@ -122,10 +122,8 @@ jobs:
       uses: softprops/action-gh-release@v2.2.1
       with:
         tag_name: iStoreOS-x86-64-${{ inputs.luci_version }}
-          body: |
+        body: |
           📌 版本： iStoreOS-x86-64-${{ inputs.luci_version }}-RELEASE
-
-          🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the Kernel
           
           🧩 集成： 包含了基础系统组件、驱动、网络工具、容器支持、LuCI界面及插件等
           
@@ -134,8 +132,7 @@ jobs:
           🔒 密码： 无
           
           🌐 初始IP： ${{ inputs.ipaddr }}
-
-        
+     
         files: |
           imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
         token: ${{ secrets.GITHUB_TOKEN }}
