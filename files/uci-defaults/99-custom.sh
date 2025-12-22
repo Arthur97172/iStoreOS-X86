@@ -92,4 +92,9 @@ fi
 uci set dropbear.@dropbear[0].Interface=''
 uci commit
 
+# 设置作者描述信息
+FILE_PATH="/etc/openwrt_release"
+NEW_DESCRIPTION="iStoreOS VERXXXX"
+sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
+
 exit 0
