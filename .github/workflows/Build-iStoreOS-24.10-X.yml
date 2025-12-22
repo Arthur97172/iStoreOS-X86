@@ -121,9 +121,9 @@ jobs:
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
       with:
-        tag_name: iStoreOS-x86-64-${{ inputs.luci_version }}
+        tag_name: iStoreOS-x86-64-${{ inputs.luci_version }}-RELEASE
         body: |
-          📌 版本： iStoreOS-x86-64-${{ inputs.luci_version }}-RELEASE
+          📌 版本： iStoreOS-x86-64-${{ inputs.luci_version }}
           
           🧩 集成： 包含了基础系统组件、驱动、网络工具、容器支持、LuCI界面及插件等
           
