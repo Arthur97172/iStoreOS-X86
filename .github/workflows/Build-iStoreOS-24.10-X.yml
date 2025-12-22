@@ -141,12 +141,12 @@ jobs:
           fi
 
     - name: 🚀 上传到 Release
-        uses: softprops/action-gh-release@v2.2.1
-        with:
-          tag_name: iStoreOS-x86-64-${{ github.event.inputs.luci_version }}-RELEASE
-          # 3. 使用 body_path 读取刚才生成的文件内容
-          body_path: ${{ github.workspace }}/router-info.md
-          files: |
-            imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
+      uses: softprops/action-gh-release@v2.2.1
+      with:
+        tag_name: iStoreOS-x86-64-${{ github.event.inputs.luci_version }}-RELEASE
+        # 3. 使用 body_path 读取刚才生成的文件内容
+        body_path: ${{ github.workspace }}/router-info.md
+        files: |
+          imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
           token: ${{ secrets.GITHUB_TOKEN }}
 
