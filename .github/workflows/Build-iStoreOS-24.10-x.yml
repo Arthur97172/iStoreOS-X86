@@ -1,4 +1,4 @@
-name: 📦 Build iStoreOS_x86_64 24.10.X -T
+name: 📦 Build iStoreOS_x86_64 24.10.x
 
 on:
   workflow_dispatch:
@@ -121,8 +121,6 @@ jobs:
         # 进入目标目录
         cd imagebuilder/bin/targets/x86/64/
         
-        # 将所有匹配的固件加上版本号前缀
-        # 例如：istoreos-xxx.img.gz -> v2.3.1-istoreos-xxx.img.gz
         for f in *squashfs-combined-efi.img.gz; do
           if [ -f "$f" ]; then
             echo "正在重命名 $f 为 ${{ github.event.inputs.luci_version }}-$f"
