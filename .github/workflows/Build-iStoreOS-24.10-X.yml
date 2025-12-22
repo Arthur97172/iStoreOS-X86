@@ -131,6 +131,7 @@ jobs:
           🔒 密码： 无
           
           🌐 初始IP： ${{ github.event.inputs.ipaddr }}
+          
           EOF
 
           # 2. 根据判断追加 Docker 状态
