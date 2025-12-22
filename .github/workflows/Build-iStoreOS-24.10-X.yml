@@ -132,7 +132,13 @@ jobs:
           🔒 密码： 无
           
           🌐 初始IP： ${{ inputs.ipaddr }}
-     
+
+          if [ "${{ github.event.inputs.include_docker }}" == "yes" ]; then
+            # 格式与上方保持完全一致
+            echo "🧩 **Docker 状态**: 已集成" >> ${{ github.workspace }}/router-info.md
+          else
+            echo "🧩 **Docker 状态**: 未集成" >> ${{ github.workspace }}/router-info.md
+          fi
         files: |
           imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
         token: ${{ secrets.GITHUB_TOKEN }}
