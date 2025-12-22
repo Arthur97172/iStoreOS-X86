@@ -118,12 +118,11 @@ jobs:
         echo "打印bin目录"
         ls -lah imagebuilder/bin/targets/x86/64/
 
-    - name: 🚀 上传到 Release
-      uses: softprops/action-gh-release@v2.2.1
-      with:
-        tag_name: iStoreOS-x86-64-${{ inputs.luci_version }}-RELEASE
-        body: |
-          📌 版本： iStoreOS-x86-64-${{ inputs.luci_version }}
+    - name: 生成路由器基本信息
+        run: |
+          # 1. 先创建基础信息到文件
+          cat > ${{ github.workspace }}/router-info.md <<EOF
+          📌 版本： iStoreOS-x86-64-${{ github.event.inputs.luci_version }}
           
           🧩 集成： 包含了基础系统组件、驱动、网络工具、容器支持、LuCI界面及插件等
           
@@ -131,17 +130,23 @@ jobs:
           
           🔒 密码： 无
           
-          🌐 初始IP： ${{ inputs.ipaddr }}
+          🌐 初始IP： ${{ github.event.inputs.ipaddr }}
+          EOF
 
+          # 2. 根据判断追加 Docker 状态
           if [ "${{ github.event.inputs.include_docker }}" == "yes" ]; then
-            # 格式与上方保持完全一致
             echo "🧩 **Docker 状态**: 已集成" >> ${{ github.workspace }}/router-info.md
           else
             echo "🧩 **Docker 状态**: 未集成" >> ${{ github.workspace }}/router-info.md
           fi
-        files: |
-          imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
-        token: ${{ secrets.GITHUB_TOKEN }}
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🚀 上传到 Release
+        uses: softprops/action-gh-release@v2.2.1
+        with:
+          tag_name: iStoreOS-x86-64-${{ github.event.inputs.luci_version }}-RELEASE
+          # 3. 使用 body_path 读取刚才生成的文件内容
+          body_path: ${{ github.workspace }}/router-info.md
+          files: |
+            imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
+          token: ${{ secrets.GITHUB_TOKEN }}
 
