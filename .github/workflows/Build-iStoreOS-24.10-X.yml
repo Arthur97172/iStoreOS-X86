@@ -119,7 +119,7 @@ jobs:
         ls -lah imagebuilder/bin/targets/x86/64/
 
     - name: 生成路由器基本信息
-        run: |
+      run: |
           # 1. 先创建基础信息到文件
           cat > ${{ github.workspace }}/router-info.md <<EOF
           📌 版本： iStoreOS-x86-64-${{ github.event.inputs.luci_version }}
@@ -140,7 +140,7 @@ jobs:
             echo "🧩 **Docker 状态**: 未集成" >> ${{ github.workspace }}/router-info.md
           fi
 
-      - name: 🚀 上传到 Release
+    - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
         with:
           tag_name: iStoreOS-x86-64-${{ github.event.inputs.luci_version }}-RELEASE
