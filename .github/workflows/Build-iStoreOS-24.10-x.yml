@@ -113,7 +113,7 @@ jobs:
         cat Makefile |grep here
         bash ./build_config.sh
 
-    - name: 📦 打印并重命名产出固件
+    - name: 🔍 打印imagebuilder目录结构并重命名固件信息
       run: |
         echo "--- 原始文件列表 ---"
         ls -lah imagebuilder/bin/targets/x86/64/
@@ -131,7 +131,7 @@ jobs:
         echo "--- 改名后文件列表 ---"
         ls -lah .
 
-    - name: 生成路由器基本信息
+    - name: 📜 生成路由器基本信息
       run: |
           # 1. 先创建基础信息到文件
           cat > ${{ github.workspace }}/router-info.md <<EOF
