@@ -11,8 +11,6 @@ on:
         options:
           - 'latest'
           - '20251205'
-          - '20251128'
-          - '20251121'
       luci_version:
         description: "选择luci版本"
         required: true
