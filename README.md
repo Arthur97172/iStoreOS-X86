@@ -1,2 +1,52 @@
-# iStoreOS-X86
-Support iStoreOS X86-64
+<div align="center">
+  <img src="./files/screenshot/istoreos.png" style="max-width: 100%; height: auto;" />
+  <h1>基于iStoreOS Imagebuilder X86-64</h1>
+  
+  <img src="https://img.shields.io/github/downloads/Arthur97172/iStoreOS-X86/total.svg?style=for-the-badge&color=32C955"/>
+  <img src="https://img.shields.io/github/stars/Arthur97172/iStoreOS-X86.svg?style=for-the-badge&color=orange"/>
+  <img src="https://img.shields.io/github/forks/Arthur97172/iStoreOS-X86.svg?style=for-the-badge&color=ff69b4"/>
+  <img src="https://img.shields.io/github/license/Arthur97172/iStoreOS-X86.svg?style=for-the-badge&color=blueviolet"/>
+
+  [![](https://img.shields.io/badge/-目录:-696969.svg)](#readme)
+  [![](https://img.shields.io/badge/-项目介绍-FFFFFF.svg)](#-项目介绍-)
+  [![](https://img.shields.io/badge/-第三方插件-FFFFFF.svg)](#-第三方插件-)
+  [![](https://img.shields.io/badge/-支持设备-FFFFFF.svg)](#-支持设备-)
+  [![](https://img.shields.io/badge/-项目截图-FFFFFF.svg)](#-项目截图-)
+  [![](https://img.shields.io/badge/-Thanks-FFFFFF.svg)](#-Thanks-)
+  [![](https://img.shields.io/badge/-免责声明-FFFFFF.svg)](#-免责声明-)
+</div>
+
+---
+
+## 🤔 项目介绍 [![](https://img.shields.io/badge/-项目介绍-FFFFFF.svg)](#-项目介绍-)
+**iStoreOS** 目标是提供一个人人会用的路由兼轻 **NAS 系统** ，不管是作为路由还是 NAS，你都有相似的操作体验。
+
+> [!TIP]
+> 😂此固件为 **非官方构建，不保证完全无BUG** ，请知悉😂
+> 
+
+## 🤗 项目截图 [![](https://img.shields.io/badge/-项目截图-FFFFFF.svg)](#-项目截图-)
+![screenshots](./files/screenshot/02.jpg)
+![screenshots](./files/screenshot/03.jpg)
+![screenshots](./files/screenshot/01.jpg)
+![screenshots](./files/screenshot/04.jpg)
+
+## 🌟 Star戳一戳，好运加满！😆
+> **"点过 `Star` 的朋友，颜值与智慧双双在线！✨"**
+> 
+> **"您的每一个⭐️，都是开源土壤里的一缕阳光，让灵感发芽，让创造生长~"**
+
+## 🎉 Thanks [![](https://img.shields.io/badge/-Thanks-FFFFFF.svg)](#-Thanks-)
+- [istoreos](https://github.com/istoreos/istoreos)
+- [Wukongdaily](https://github.com/wukongdaily/istoreos-builder)
+
+## 🙏 免责声明 [![](https://img.shields.io/badge/-免责声明-FFFFFF.svg)](#-免责声明-)
+- 📚 本固件仅供学习研究，严禁用于任何商业用途
+- 🤝 使用本固件产生的所有后果均由使用者自行承担
+- ⚠️ 固件仍可能存在缺陷，开发者不提供任何形式的技术支持
+- 📜 请严格遵守国家网络安全法律法规，合法使用
+
+<a href="#readme">
+<img src="https://img.shields.io/badge/-返回顶部-FFFFFF.svg" title="返回顶部" align="right"/>
+</a>
+
