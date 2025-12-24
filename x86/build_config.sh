@@ -108,6 +108,21 @@ PACKAGES="$PACKAGES kmod-tg3"
 PACKAGES="$PACKAGES kmod-drm-i915"
 PACKAGES="$PACKAGES -libustream-mbedtls"
 
+#Arthur添加
+PACKAGES="$PACKAGES alsa-utils"
+PACKAGES="$PACKAGES busybox"
+PACKAGES="$PACKAGES kmod-amazon-ena"
+PACKAGES="$PACKAGES kmod-amd-xgbe"
+PACKAGES="$PACKAGES kmod-bnx2"
+PACKAGES="$PACKAGES kmod-tg3"
+PACKAGES="$PACKAGES kmod-r8169"
+PACKAGES="$PACKAGES kmod-usb-core"
+PACKAGES="$PACKAGES kmod-usb-net-rtl8152"
+PACKAGES="$PACKAGES kmod-phy-ax88796b"
+PACKAGES="$PACKAGES kmod-phy-bcm84881"
+PACKAGES="$PACKAGES kmod-phy-broadcom"
+PACKAGES="$PACKAGES kmod-phy-realtek"
+
 # LuCI 中文本地化与插件
 PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-argon-zh-cn"
