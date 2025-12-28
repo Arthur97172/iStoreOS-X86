@@ -1,7 +1,9 @@
 name:  💿 Sync iStoreOS Imagebuilder
 
 on:
-  workflow_dispatch:      
+  schedule:
+    - cron: '0 2 * * *' 
+  workflow_dispatch:  
 
 jobs:
   sync:
@@ -66,8 +68,7 @@ jobs:
           files: ${{ steps.parse.outputs.filename }}
           body: |
             ## iStoreOS Imagebuilder 自动同步
-            - **源文件日期**: ${{ steps.parse.outputs.date }}
-            - **同步时间**: $(date +"%Y-%m-%d %H:%M:%S")
+            - **最新源文件更新日期**: ${{ steps.parse.outputs.date }}
             - **官方地址**: [Koolcenter](https://fw.koolcenter.com/iStoreOS/ib/x86_64/)
           make_latest: true
         env:
