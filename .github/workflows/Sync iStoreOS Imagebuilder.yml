@@ -18,8 +18,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          BASE_URL="https://fw0.koolcenter.com/iStoreOS/ib/armsr/"
-          TARGET_FILE="istoreos-imagebuilder-armsr-armv8.Linux-x86_64.tar.zst"
+          BASE_URL="https://fw.koolcenter.com/iStoreOS/ib/x86_64/"
+          TARGET_FILE="istoreos-imagebuilder-x86-64.Linux-x86_64.tar.zst"
           
           # 1. 获取包含文件名的行
           LINE_CONTENT=$(curl -sL $BASE_URL | grep "$TARGET_FILE" | head -n 1)
@@ -68,7 +68,7 @@ jobs:
             ## iStoreOS Imagebuilder 自动同步
             - **源文件日期**: ${{ steps.parse.outputs.date }}
             - **同步时间**: $(date +"%Y-%m-%d %H:%M:%S")
-            - **官方地址**: [Koolcenter](https://fw0.koolcenter.com/iStoreOS/ib/armsr/)
+            - **官方地址**: [Koolcenter](https://fw.koolcenter.com/iStoreOS/ib/x86_64/)
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
