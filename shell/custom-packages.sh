@@ -1,9 +1,9 @@
 #!/bin/bash
-# 25.12.x 第三方插件配置 (APK 格式) - x86-64 专用
+# 24.10.x 第三方插件配置 (IPK 格式) - x86-64 专用
 # 启用第三方插件时取消对应注释
 
 # argon主题 (argon)
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-argon"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-argon-config luci-theme-argon luci-i18n-argon-config-zh-cn"
 
 # aurora主题 (aurora)
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-aurora-config luci-theme-aurora luci-i18n-aurora-config-zh-cn"
