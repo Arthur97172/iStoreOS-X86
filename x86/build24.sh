@@ -182,8 +182,6 @@ PACKAGES="$PACKAGES kmod-mtk-t7xx"
 
 # LuCI 中文本地化与插件
 PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-argon-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-argon-config-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-filetransfer-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-quickstart-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-base-zh-cn"
@@ -194,8 +192,6 @@ PACKAGES="$PACKAGES luci-i18n-unishare-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 
 # LuCI 主题与功能
-PACKAGES="$PACKAGES luci-theme-argon"
-PACKAGES="$PACKAGES luci-app-argon-config"
 PACKAGES="$PACKAGES luci-app-filetransfer"
 PACKAGES="$PACKAGES luci-app-ttyd"
 PACKAGES="$PACKAGES luci-app-cifs-mount"
