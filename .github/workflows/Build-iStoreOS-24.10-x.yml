@@ -61,7 +61,7 @@ jobs:
 
     - name: ⚙️ 设置可执行权限
       run: | 
-        chmod +x x86/build_config.sh
+        chmod +x x86/build24.sh
         chmod +x shell/*.sh
              
     - name: 🛠️ 安装依赖
@@ -126,7 +126,7 @@ jobs:
     
     - name: 🔄 复制必备文件
       run: |
-        cp x86/build_config.sh imagebuilder/
+        cp x86/build24.sh imagebuilder/
         cp x86/Makefile imagebuilder/
         cp x86/repositories.conf imagebuilder/
         cp shell/prepare-packages.sh imagebuilder/
@@ -175,7 +175,7 @@ jobs:
         cat repositories.conf
         echo "打印Makefile"
         cat Makefile |grep here
-        bash ./build_config.sh
+        bash ./build24.sh
 
     - name: 🔍 打印imagebuilder目录结构并重命名固件信息
       run: |
