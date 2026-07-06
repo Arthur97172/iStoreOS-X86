@@ -47,6 +47,7 @@ on:
 
 env:
   VERSION: ${{ inputs.luci_version }}
+  DOCKER: ${{ inputs.include_docker }}
 
 jobs:
   build:
@@ -223,7 +224,7 @@ jobs:
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
       with:
-        tag_name: iStoreOS-${{ github.event.inputs.luci_version }}-x86-64-RELEASE
+        tag_name: iStoreOS-${{ github.event.inputs.luci_version }}-x86-64-RELEASE-Docker-${{ env.DOCKER }}
         # 3. 使用 body_path 读取刚才生成的文件内容
         body_path: ${{ github.workspace }}/router-info.md
         files: |
