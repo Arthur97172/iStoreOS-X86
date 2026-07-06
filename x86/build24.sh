@@ -203,10 +203,10 @@ PACKAGES="$PACKAGES coreutils"
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
 
-# 判断是否需要编译 Docker 插件
+# [Docker 插件] # 判断是否需要编译
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
-    PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
-    echo "Adding package: luci-i18n-dockerman-zh-cn"
+    echo "🐳 Docker enabled, adding docker packages"
+    PACKAGES="$PACKAGES docker docker-compose luci-app-dockerman luci-i18n-dockerman-zh-cn"
 fi
 
 # 若构建openclash 则添加内核
