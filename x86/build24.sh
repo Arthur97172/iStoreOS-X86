@@ -144,6 +144,7 @@ PACKAGES="$PACKAGES kmod-nft-tproxy"
 PACKAGES="$PACKAGES kmod-nft-socket"
 PACKAGES="$PACKAGES shadowsocksr-libev-ssr-redir"
 PACKAGES="$PACKAGES bash"
+PACKAGES="$PACKAGES kmod-tun"
 PACKAGES="$PACKAGES kmod-xdp-sockets-diag"
 
 # 博通无线网卡核心驱动
