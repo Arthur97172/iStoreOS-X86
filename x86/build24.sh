@@ -190,7 +190,6 @@ PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-cifs-mount-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-unishare-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 
 # LuCI 主题与功能
 PACKAGES="$PACKAGES luci-app-filetransfer"
@@ -204,6 +203,11 @@ PACKAGES="$PACKAGES coreutils"
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
 
+# 判断是否需要编译 Docker 插件
+if [ "$INCLUDE_DOCKER" = "yes" ]; then
+    PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
+    echo "Adding package: luci-i18n-dockerman-zh-cn"
+fi
 
 # 若构建openclash 则添加内核
 if echo "$PACKAGES" | grep -q "luci-app-openclash"; then
