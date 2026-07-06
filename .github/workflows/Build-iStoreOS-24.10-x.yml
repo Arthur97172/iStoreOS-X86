@@ -228,7 +228,9 @@ jobs:
         body_path: ${{ github.workspace }}/router-info.md
         files: |
           imagebuilder/bin/targets/x86/64/*squashfs-combined-efi.img.gz
-          imagebuilder/bin/targets/x86/64/sha256sums
+          #imagebuilder/bin/targets/x86/64/sha256sums #删除sha256sums
+        overwrite: true  # ✨ 核心修改 1：如果文件已存在，直接覆盖它
+        fail_on_unmatched_files: false  # ✨ 核心修改 2：防止因通配符匹配问题导致误报失败          
         token: ${{ secrets.GITHUB_TOKEN }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
