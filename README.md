@@ -26,6 +26,22 @@
 > 😂此固件为 **非官方构建，不保证完全无BUG** ，请知悉😂
 > 
 
+## 😅 第三方插件 [![](https://img.shields.io/badge/-第三方插件-FFFFFF.svg)](#-第三方插件-)
+<div align="left">
+
+| 插件                     | 状态 | 插件                     | 状态  | 插件                    | 状态   |
+|:------------------------:|:----:|:------------------------:|:-----:|:------------------------:|:------:|
+| Amlogic          | ✅   | Argon        | ✅    | Bandix-plus    |  ✅     |
+| Clashoo              |  ✅   | Daede                    |  ✅     | Lucky                | ✅      |
+| MosDNS              |  ✅   | Netwizard                   |  ✅     | Nikki            | ✅       |
+| Openclash              |  ✅   | Partexp                    |  ✅     | Poweroffdevice           | ✅       |
+| Rtp2httpd              |  ✅   | Tailscale                    |  ✅      | Taskplan           | ✅        |
+| Passwall              |  ✅   | N/A                    |  ⏳     | N/A            | ⭕       |
+
+✅ 支持 - ⏳ 计划中 - ⭕ 不支持
+
+用户可根据自己需要对/shell/custom-packages.sh文件进行调节
+
 </div>
 
 ## 🤗 项目截图 [![](https://img.shields.io/badge/-项目截图-FFFFFF.svg)](#-项目截图-)
