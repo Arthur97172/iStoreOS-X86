@@ -178,6 +178,11 @@ jobs:
         cat Makefile |grep here
         bash ./build24.sh
 
+    - name: 📅 获取当前日期
+      id: date
+      run: |
+        echo "date=$(date +'%Y%m%d')" >> $GITHUB_OUTPUT
+
     - name: 🔍 打印imagebuilder目录结构并重命名固件信息
       run: |
         echo "--- 原始文件列表 ---"
@@ -224,7 +229,7 @@ jobs:
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
       with:
-        tag_name: iStoreOS-${{ github.event.inputs.luci_version }}-x86-64-RELEASE-Docker-${{ env.DOCKER }}
+        tag_name: ${{ steps.date.outputs.date }}-iStoreOS-${{ github.event.inputs.luci_version }}-x86-64-RELEASE-Docker-${{ env.DOCKER }}
         # 3. 使用 body_path 读取刚才生成的文件内容
         body_path: ${{ github.workspace }}/router-info.md
         files: |
