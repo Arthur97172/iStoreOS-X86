@@ -10,6 +10,8 @@ on:
         type: choice
         options:
           - 'latest'
+          - '20260731'   
+          - '20260703'   
           - '20260605'   
           - '20260417'        
           - '20260403'              
@@ -20,7 +22,7 @@ on:
       luci_version:
         description: "选择luci版本"
         required: true
-        default: "24.10.7"
+        default: "24.10.8"
         type: choice
         options:
           - '24.10.0'
@@ -30,7 +32,8 @@ on:
           - '24.10.4' 
           - '24.10.5'
           - '24.10.6'          
-          - '24.10.7'               
+          - '24.10.7'            
+          - '24.10.8'          
       ipaddr:
         description: "请设置软路由的管理地址,格式:192.168.x.1"
         required: true
@@ -64,14 +67,14 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     # 关键：添加写入权限，解决 403 报错
     permissions:
       contents: write
     steps:
     
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: ⚙️ 设置可执行权限
       run: | 
